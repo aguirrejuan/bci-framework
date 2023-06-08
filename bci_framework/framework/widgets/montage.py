@@ -394,7 +394,7 @@ class TopoplotImpedances(TopoplotBase):
         cmap_ = LinearSegmentedColormap.from_list('plane', colors, N=2)
 
         self.ax.clear()
-        mne.viz.plot_topomap(values, info, vmin=-1, vmax=1, contours=0,
+        mne.viz.plot_topomap(values, info, vlim=(-1,1), contours=0,
                              cmap=cmap_, outlines='head', axes=self.ax,
                              names=channels_labels,
                              sensors=True, show=False,
