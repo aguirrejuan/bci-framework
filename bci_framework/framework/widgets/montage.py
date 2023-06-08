@@ -273,7 +273,7 @@ class TopoplotMontage(TopoplotBase, DragAndDropMontage):
         # z = pos[:, -1].mean()
         # [x, y, z, radius]
 
-        mne.viz.plot_topomap(values, info, vmin=-1, vmax=1, contours=0, cmap=cm, outlines='skirt', names=channels_labels, show_names=True, axes=self.ax, sensors=True, show=False,
+        mne.viz.plot_topomap(values, info, vlim(-1, 1), contours=0, cmap=cm, outlines='skirt', names=channels_labels, show_names=True, axes=self.ax, sensors=True, show=False,
                              mask_params=dict(marker='o', markerfacecolor='#263238',
                                               markeredgecolor='#4f5b62', linewidth=0, markersize=self.markersize),
                              mask=channels_mask,
