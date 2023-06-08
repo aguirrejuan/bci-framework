@@ -32,7 +32,7 @@ class Stream(EEGStream):
             eeg = data
             self.axis.clear()
             mne.viz.plot_topomap(eeg.mean(axis=1) - eeg.mean(), 
-                self.info, axes=self.axis, show=False, outlines='skirt', cmap='cool')
+                self.info, axes=self.axis, show=False, outlines='head', cmap='cool')
 
             self.feed()
 
